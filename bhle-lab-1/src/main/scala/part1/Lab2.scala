@@ -26,10 +26,18 @@ trait Walks {
 // Can Dog only extend from `Walks`?
 // Try to fix Dog, so it extends proper traits
 // Implement Dog class so it passes tests
-case class Dog(???) extends Walks
+case class Dog (dog_name:String) extends Animal with Walks {
+  override def name: String = dog_name
+
+  override def makeSound(): String = "Whooof"
+}
 
 // Implement Cat class so it passes tests
-case class Cat(???) extends Animal with Walks
+case class Cat(cat_name:String) extends Animal with Walks {
+  override def name: String = cat_name
+
+  override def makeSound(): String = "Miiyaaau"
+}
 
 object Lab2 extends App {
 
